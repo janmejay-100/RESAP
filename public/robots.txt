@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://resap.app/sitemap.xml
+
+# Disallow admin or temp paths
+Disallow: /tmp/

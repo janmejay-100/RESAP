@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Create beautiful photo collages online with RESAP. Arrange multiple photos and download your collage.">
+
+  <title>Photo Collage Maker — RESAP</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/tools.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <a href="/" class="navbar-brand" aria-label="RESAP Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-name">RESAP</span>
+      </a>
+
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <button
+          class="nav-link all-tools-btn"
+          id="allToolsBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="megaMenu"
+        >
+          All Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <a href="/#how-it-works" class="nav-link">How It Works</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          class="nav-icon-btn search-trigger-btn"
+          type="button"
+          aria-label="Search tools"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ALL TOOLS MEGA MENU -->
+    <div class="mega-menu-overlay" id="megaMenuOverlay"></div>
+
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-inner">
+
+        <div class="mega-menu-header">
+          <div>
+            <h2>Explore all tools</h2>
+            <p>Everything you need to prepare your documents.</p>
+          </div>
+
+          <div class="mega-menu-search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="megaMenuSearch"
+              placeholder="Search tools..."
+              aria-label="Search all tools"
+            >
+          </div>
+        </div>
+
+        <div class="mega-menu-body">
+
+          <!-- IMAGE TOOLS -->
+          <div class="mega-menu-category">
+            <h3>Image Tools</h3>
+
+            <a href="/tools/image-resizer.html" class="mega-menu-item">
+              <i data-lucide="maximize-2"></i>
+              <span>
+                <span class="tool-name">Image Resizer</span>
+                <span class="tool-desc">Resize images to exact dimensions</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-compressor.html" class="mega-menu-item">
+              <i data-lucide="minimize-2"></i>
+              <span>
+                <span class="tool-name">Image Compressor</span>
+                <span class="tool-desc">Reduce image file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-converter.html" class="mega-menu-item">
+              <i data-lucide="repeat"></i>
+              <span>
+                <span class="tool-name">Image Format Converter</span>
+                <span class="tool-desc">Convert JPG, PNG and WebP</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-cropper.html" class="mega-menu-item">
+              <i data-lucide="crop"></i>
+              <span>
+                <span class="tool-name">Image Cropper</span>
+                <span class="tool-desc">Crop images easily</span>
+              </span>
+            </a>
+
+            <a href="/tools/photo-collage.html" class="mega-menu-item">
+              <i data-lucide="layout-grid"></i>
+              <span>
+                <span class="tool-name">Photo Collage Maker</span>
+                <span class="tool-desc">Create photo collages</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- SIGNATURE AND PASSPORT -->
+          <div class="mega-menu-category">
+            <h3>Signature & Passport</h3>
+
+            <a href="/tools/signature-resizer.html" class="mega-menu-item">
+              <i data-lucide="pen-line"></i>
+              <span>
+                <span class="tool-name">Signature Resizer</span>
+                <span class="tool-desc">Resize signatures for applications</span>
+              </span>
+            </a>
+
+            <a href="/tools/signature-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus"></i>
+              <span>
+                <span class="tool-name">Signature Compressor</span>
+                <span class="tool-desc">Reduce signature file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-photo-editor.html" class="mega-menu-item">
+              <i data-lucide="user-square"></i>
+              <span>
+                <span class="tool-name">Passport Photo Editor</span>
+                <span class="tool-desc">Prepare passport-size photos</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-sheet-maker.html" class="mega-menu-item">
+              <i data-lucide="grid-3x3"></i>
+              <span>
+                <span class="tool-name">Passport Photo Sheet Maker</span>
+                <span class="tool-desc">Create printable photo sheets</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- PDF TOOLS -->
+          <div class="mega-menu-category">
+            <h3>PDF Tools</h3>
+
+            <a href="/tools/pdf-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus-2"></i>
+              <span>
+                <span class="tool-name">PDF Compressor</span>
+                <span class="tool-desc">Reduce PDF file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-to-pdf.html" class="mega-menu-item">
+              <i data-lucide="file-plus-2"></i>
+              <span>
+                <span class="tool-name">Image to PDF</span>
+                <span class="tool-desc">Convert images into PDF</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-merger.html" class="mega-menu-item">
+              <i data-lucide="files"></i>
+              <span>
+                <span class="tool-name">PDF Merger</span>
+                <span class="tool-desc">Combine multiple PDF files</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-splitter.html" class="mega-menu-item">
+              <i data-lucide="scissors"></i>
+              <span>
+                <span class="tool-name">PDF Splitter</span>
+                <span class="tool-desc">Split PDF documents</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="/#faq" class="mobile-nav-link">FAQ</a>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Image Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/image-converter.html">Image Converter</a>
+          <a href="/tools/image-cropper.html">Image Cropper</a>
+          <a href="/tools/photo-collage.html">Photo Collage Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Signature & Passport
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/signature-compressor.html">Signature Compressor</a>
+          <a href="/tools/passport-photo-editor.html">Passport Photo Editor</a>
+          <a href="/tools/passport-sheet-maker.html">Passport Sheet Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          PDF Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/pdf-compressor.html">PDF Compressor</a>
+          <a href="/tools/image-to-pdf.html">Image to PDF</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+          <a href="/tools/pdf-splitter.html">PDF Splitter</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <div class="container">
+
+      <div class="tool-header">
+        <a href="/" class="back-link">
+          <i data-lucide="arrow-left"></i>
+          Back to RESAP
+        </a>
+
+        <span class="section-label">Image Tools</span>
+
+        <h1>Photo Collage Maker</h1>
+
+        <p>
+          Combine multiple photos into one collage.
+          Choose a layout, customize the spacing and background,
+          then download your finished collage.
+        </p>
+      </div>
+
+      <div class="tool-workspace">
+
+        <section class="tool-main">
+
+          <div class="tool-panel">
+            <h2>Upload your photos</h2>
+
+            <p class="panel-description">
+              Select between 2 and 6 images. JPG, PNG and WebP supported.
+            </p>
+
+            <div class="upload-area" id="collageUploadArea">
+              <input
+                type="file"
+                id="collageImageInput"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+                hidden
+              >
+
+              <div class="upload-icon">
+                <i data-lucide="images"></i>
+              </div>
+
+              <h3>Drop your photos here</h3>
+              <p>or click to browse your device</p>
+
+              <span class="upload-hint">
+                Upload 2–6 photos · Maximum 20 MB per image
+              </span>
+            </div>
+
+            <div id="collageFileList" class="file-list"></div>
+            <div class="scan-upload-panel">
+    <button class="btn btn-secondary" id="scanUploadBtn" type="button">
+        <i data-lucide="smartphone"></i>
+        Scan & Upload from Phone
+    </button>
+
+    <p id="scanUploadStatus">
+        Upload photos directly from your phone.
+    </p>
+
+    <div id="scanQrContainer" hidden>
+        <canvas id="scanQrCode"></canvas>
+        <p id="scanExpiry"></p>
+    </div>
+</div>
+
+            <div id="photoThumbnailList" class="photo-thumbnail-list"></div>
+          </div>
+
+          <div class="tool-panel" id="collagePreviewPanel" hidden>
+            <h2>Collage preview</h2>
+
+            <div class="collage-preview-wrapper">
+              <canvas
+                id="collageCanvas"
+                aria-label="Photo collage preview"
+              ></canvas>
+            </div>
+
+            <p id="collageDimensions" class="comparison-size">
+              —
+            </p>
+          </div>
+
+        </section>
+
+        <aside class="tool-sidebar">
+
+          <div class="tool-panel">
+            <h2>Collage settings</h2>
+
+            <div class="form-group">
+              <label for="collageLayout">Choose layout</label>
+
+              <select id="collageLayout" disabled>
+                <option value="2">2 Photos</option>
+                <option value="3">3 Photos</option>
+                <option value="4" selected>4 Photos</option>
+                <option value="6">6 Photos</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="collageSpacing">
+                Photo spacing: <span id="spacingValue">12 px</span>
+              </label>
+
+              <input
+                type="range"
+                id="collageSpacing"
+                min="0"
+                max="40"
+                value="12"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="collageRadius">
+                Corner radius: <span id="radiusValue">8 px</span>
+              </label>
+
+              <input
+                type="range"
+                id="collageRadius"
+                min="0"
+                max="40"
+                value="8"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="collageBackground">Background color</label>
+
+              <input
+                type="color"
+                id="collageBackground"
+                value="#ffffff"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="collageOutputFormat">Output format</label>
+
+              <select id="collageOutputFormat" disabled>
+                <option value="image/png">PNG</option>
+                <option value="image/jpeg">JPG</option>
+              </select>
+            </div>
+
+            <button
+              class="btn btn-primary btn-block"
+              id="createCollageBtn"
+              type="button"
+              disabled
+            >
+              <i data-lucide="layout-grid"></i>
+              Create Collage
+            </button>
+
+            <button
+              class="btn btn-secondary btn-block"
+              id="downloadCollageBtn"
+              type="button"
+              disabled
+            >
+              <i data-lucide="download"></i>
+              Download Collage
+            </button>
+
+            <button
+              class="btn btn-secondary btn-block"
+              id="resetCollageBtn"
+              type="button"
+            >
+              Reset
+            </button>
+
+            <p
+              class="tool-status"
+              id="collageStatus"
+              role="status"
+              aria-live="polite"
+            >
+              Upload your photos to get started.
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <section class="tool-seo-content">
+        <h2>How to create a photo collage</h2>
+
+        <p>
+          Upload your photos, choose a collage layout,
+          adjust spacing and corner radius, select a background
+          color and create your collage. Download the finished
+          image when you're satisfied with the preview.
+        </p>
+
+        <h2>Why use a photo collage?</h2>
+
+        <p>
+          A photo collage combines multiple pictures into
+          a single image. It is useful for memories, presentations,
+          social media posts and personal projects.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> RESAP. All rights reserved.</p>
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/photo-collage.js"></script>
+
+   <!-- SEARCH MODAL -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-dialog">
+
+      <div class="search-modal-header">
+        <i data-lucide="search"></i>
+        <input
+          type="search"
+          class="search-modal-input"
+          placeholder="Search for a tool..."
+          aria-label="Search for a tool"
+        >
+        <span class="search-shortcut">ESC</span>
+      </div>
+
+      <div class="search-modal-results">
+        <div class="search-modal-empty">Type to search for tools...</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Arrange multiple passport-size photographs on printable sheets. Create A4, A5 and 4x6 photo sheets with RESAP."
+  >
+
+  <title>Passport Photo Sheet Maker - RESAP</title>
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/tools.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body class="passport-sheet-page">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <a href="/" class="navbar-brand" aria-label="RESAP Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-name">RESAP</span>
+      </a>
+
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <button
+          class="nav-link all-tools-btn"
+          id="allToolsBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="megaMenu"
+        >
+          All Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <a href="/#how-it-works" class="nav-link">How It Works</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          class="nav-icon-btn search-trigger-btn"
+          type="button"
+          aria-label="Search tools"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MEGA MENU OVERLAY -->
+    <div class="mega-menu-overlay" id="megaMenuOverlay"></div>
+
+    <!-- MEGA MENU -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-inner">
+
+        <div class="mega-menu-header">
+          <div>
+            <h2>Explore all tools</h2>
+            <p>Everything you need to prepare your documents.</p>
+          </div>
+
+          <div class="mega-menu-search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="megaMenuSearch"
+              placeholder="Search tools..."
+              aria-label="Search all tools"
+            >
+          </div>
+        </div>
+
+        <div class="mega-menu-body">
+
+          <div class="mega-menu-category">
+            <h3>Image Tools</h3>
+
+            <a href="/tools/image-resizer.html" class="mega-menu-item">
+              <i data-lucide="maximize-2"></i>
+              <span>
+                <span class="tool-name">Image Resizer</span>
+                <span class="tool-desc">Resize images to exact dimensions</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-compressor.html" class="mega-menu-item">
+              <i data-lucide="minimize-2"></i>
+              <span>
+                <span class="tool-name">Image Compressor</span>
+                <span class="tool-desc">Reduce image file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-converter.html" class="mega-menu-item">
+              <i data-lucide="repeat"></i>
+              <span>
+                <span class="tool-name">Image Format Converter</span>
+                <span class="tool-desc">Convert JPG, PNG and WebP</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-cropper.html" class="mega-menu-item">
+              <i data-lucide="crop"></i>
+              <span>
+                <span class="tool-name">Image Cropper</span>
+                <span class="tool-desc">Crop images easily</span>
+              </span>
+            </a>
+
+            <a href="/tools/photo-collage.html" class="mega-menu-item">
+              <i data-lucide="layout-grid"></i>
+              <span>
+                <span class="tool-name">Photo Collage Maker</span>
+                <span class="tool-desc">Create photo collages</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>Signature & Passport</h3>
+
+            <a href="/tools/signature-resizer.html" class="mega-menu-item">
+              <i data-lucide="pen-line"></i>
+              <span>
+                <span class="tool-name">Signature Resizer</span>
+                <span class="tool-desc">Resize signatures for applications</span>
+              </span>
+            </a>
+
+            <a href="/tools/signature-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus"></i>
+              <span>
+                <span class="tool-name">Signature Compressor</span>
+                <span class="tool-desc">Reduce signature file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-photo-editor.html" class="mega-menu-item">
+              <i data-lucide="user-square"></i>
+              <span>
+                <span class="tool-name">Passport Photo Editor</span>
+                <span class="tool-desc">Prepare passport-size photos</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-sheet-maker.html" class="mega-menu-item">
+              <i data-lucide="grid-3x3"></i>
+              <span>
+                <span class="tool-name">Passport Photo Sheet Maker</span>
+                <span class="tool-desc">Arrange photos for printing</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>PDF Tools</h3>
+
+            <a href="/tools/pdf-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus-2"></i>
+              <span>
+                <span class="tool-name">PDF Compressor</span>
+                <span class="tool-desc">Reduce PDF file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-to-pdf.html" class="mega-menu-item">
+              <i data-lucide="file-plus-2"></i>
+              <span>
+                <span class="tool-name">Image to PDF</span>
+                <span class="tool-desc">Convert images into PDF</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-merger.html" class="mega-menu-item">
+              <i data-lucide="files"></i>
+              <span>
+                <span class="tool-name">PDF Merger</span>
+                <span class="tool-desc">Combine multiple PDF files</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-splitter.html" class="mega-menu-item">
+              <i data-lucide="scissors"></i>
+              <span>
+                <span class="tool-name">PDF Splitter</span>
+                <span class="tool-desc">Split PDF documents</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="/#faq" class="mobile-nav-link">FAQ</a>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Image Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/image-converter.html">Image Converter</a>
+          <a href="/tools/image-cropper.html">Image Cropper</a>
+          <a href="/tools/photo-collage.html">Photo Collage Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Signature & Passport
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/signature-compressor.html">Signature Compressor</a>
+          <a href="/tools/passport-photo-editor.html">Passport Photo Editor</a>
+          <a href="/tools/passport-sheet-maker.html">Passport Photo Sheet Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          PDF Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/pdf-compressor.html">PDF Compressor</a>
+          <a href="/tools/image-to-pdf.html">Image to PDF</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+          <a href="/tools/pdf-splitter.html">PDF Splitter</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="tool-page">
+
+    <!-- PAGE HEADER -->
+    <section class="tool-header">
+      <div class="container">
+
+
+        <h1>Passport Photo Sheet Maker</h1>
+
+        <p>
+          Arrange multiple passport-size photographs on a printable sheet.
+          Customize photo dimensions, spacing and paper size.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- TOOL WORKSPACE -->
+    <section class="tool-workspace container">
+
+      <div class="tool-layout">
+
+        <!-- LEFT: SETTINGS -->
+        <div class="tool-settings-panel">
+
+          <h2>Upload Photograph</h2>
+
+          <p class="panel-description">
+            Upload a prepared passport photograph to create your print sheet.
+          </p>
+
+          <!-- UPLOAD AREA -->
+          <div class="upload-area" id="sheetUploadArea">
+
+            <input
+              type="file"
+              id="sheetImageInput"
+              accept="image/jpeg,image/png,image/webp"
+              hidden
+            >
+
+            <div class="upload-content">
+              <div class="upload-icon">↑</div>
+
+              <h3>Drag and drop your photograph</h3>
+
+              <p>or click to browse files</p>
+
+              <span>JPG, PNG or WebP · Maximum 10 MB</span>
+            </div>
+
+          </div>
+            <!-- SCAN & UPLOAD FROM PHONE -->
+<div class="scan-upload-panel">
+
+  <button
+    class="btn btn-secondary"
+    id="scanUploadBtn"
+    type="button"
+  >
+    <i data-lucide="smartphone"></i>
+    Scan & Upload from Phone
+  </button>
+
+  <p id="scanUploadStatus">
+    Upload your photograph directly from your phone.
+  </p>
+
+  <div id="scanQrContainer" hidden>
+    <canvas id="scanQrCode"></canvas>
+    <p id="scanExpiry"></p>
+  </div>
+
+</div>
+          <!-- PHOTO SETTINGS -->
+          <div class="settings-group">
+
+            <h3>Photo Settings</h3>
+
+            <div class="form-group">
+              <label for="sheetPhotoSize">Photo size</label>
+
+              <select id="sheetPhotoSize" disabled>
+                <option value="35x45">35 × 45 mm</option>
+                <option value="2x2">2 × 2 inches</option>
+                <option value="25x35">25 × 35 mm</option>
+                <option value="custom">Custom size</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="sheetPhotoWidth">Width (mm)</label>
+
+                <input
+                  type="number"
+                  id="sheetPhotoWidth"
+                  min="10"
+                  max="100"
+                  value="35"
+                  disabled
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="sheetPhotoHeight">Height (mm)</label>
+
+                <input
+                  type="number"
+                  id="sheetPhotoHeight"
+                  min="10"
+                  max="100"
+                  value="45"
+                  disabled
+                >
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- PAPER SETTINGS -->
+          <div class="settings-group">
+
+            <h3>Paper Settings</h3>
+
+            <div class="form-group">
+              <label for="sheetPaperSize">Paper size</label>
+
+              <select id="sheetPaperSize" disabled>
+                <option value="a4">A4 (210 × 297 mm)</option>
+                <option value="a5">A5 (148 × 210 mm)</option>
+                <option value="4x6">4 × 6 inches</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sheetOrientation">Orientation</label>
+
+              <select id="sheetOrientation" disabled>
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sheetDpi">Print resolution</label>
+
+              <select id="sheetDpi" disabled>
+                <option value="150">150 DPI</option>
+                <option value="200">200 DPI</option>
+                <option value="300" selected>300 DPI</option>
+                <option value="600">600 DPI</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- LAYOUT SETTINGS -->
+          <div class="settings-group">
+
+            <h3>Layout Settings</h3>
+
+            <div class="form-group">
+              <label for="sheetPhotoCount">Number of photographs</label>
+
+              <input
+                type="number"
+                id="sheetPhotoCount"
+                min="1"
+                max="100"
+                value="30"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="sheetSpacing">
+                Spacing between photos (mm)
+              </label>
+
+              <input
+                type="number"
+                id="sheetSpacing"
+                min="0"
+                max="20"
+                value="3"
+                step="0.5"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="sheetMargin">
+                Page margin (mm)
+              </label>
+
+              <input
+                type="number"
+                id="sheetMargin"
+                min="0"
+                max="30"
+                value="3"
+                step="0.5"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="sheetBackground">Sheet background</label>
+
+              <select id="sheetBackground" disabled>
+                <option value="white">White</option>
+                <option value="lightgray">Light Gray</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- ACTIONS -->
+         
+
+          <!-- STATUS -->
+          <p
+            id="sheetStatus"
+            class="tool-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+        <!-- RIGHT: PREVIEW -->
+        <div class="tool-preview-panel">
+
+          <div class="preview-heading">
+            <div>
+              <h2>Print Sheet Preview</h2>
+
+              <p>
+                Preview your photographs before downloading.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORIGINAL PHOTO -->
+          <div class="preview-box">
+
+            <h3>Uploaded Photograph</h3>
+
+            <div class="image-preview">
+
+              <img
+                id="sheetOriginalPreview"
+                alt="Uploaded passport photograph"
+                hidden
+              >
+
+              <span id="sheetOriginalPlaceholder">
+                Your uploaded photograph will appear here
+              </span>
+
+            </div>
+
+            <p id="sheetOriginalInfo">
+              No photograph uploaded
+            </p>
+
+          </div>
+
+          <!-- SHEET PREVIEW -->
+          <div class="preview-box sheet-result-box">
+
+            <h3>Generated Print Sheet</h3>
+
+            <div
+              class="sheet-preview-container"
+              id="sheetPreviewContainer"
+            >
+
+              <canvas
+                id="sheetResultCanvas"
+                hidden
+              ></canvas>
+
+              <span id="sheetResultPlaceholder">
+                Your generated print sheet will appear here
+              </span>
+
+            </div>
+
+            <p id="sheetResultInfo">
+              No sheet generated
+            </p>
+
+          </div>
+
+          <!-- OUTPUT DETAILS -->
+          <div
+            class="settings-group"
+            id="sheetOutputSummary"
+            hidden
+          >
+
+            <h3>Sheet Details</h3>
+
+            <p id="sheetOutputPaper"></p>
+            <p id="sheetOutputCount"></p>
+            <p id="sheetOutputDimensions"></p>
+
+          </div>
+
+          <!-- DOWNLOAD SETTINGS -->
+          <div class="settings-group">
+
+            <h3>Download Format</h3>
+
+            <div class="form-group">
+              <label for="sheetOutputFormat">File format</label>
+
+              <select id="sheetOutputFormat" disabled>
+                <option value="pdf">PDF (Recommended for printing)</option>
+                <option value="jpg">JPG Image</option>
+                <option value="png">PNG Image</option>
+              </select>
+            </div>
+            <!-- ACTIONS -->
+<div class="tool-actions">
+
+  <button
+    id="generateSheetBtn"
+    class="btn btn-primary"
+    disabled
+  >
+    Generate Photo Sheet
+  </button>
+
+  <button
+    id="resetSheetBtn"
+    class="btn btn-secondary"
+    disabled
+  >
+    Reset
+  </button>
+
+</div>
+          </div>
+          
+
+          <!-- DOWNLOAD -->
+          <button
+            id="downloadSheetBtn"
+            class="btn btn-primary"
+            disabled
+          >
+            Download Print Sheet
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+<!-- SEO CONTENT -->
+<section class="tool-seo-content">
+  <h2>What is a Passport Photo Sheet Maker?</h2>
+
+  <p>
+    RESAP Passport Photo Sheet Maker helps you arrange multiple
+    passport-size photographs on a single printable sheet.
+    Upload your photograph, choose the required photo dimensions,
+    select a paper size and customize the spacing between photos.
+  </p>
+
+  <h2>How to create a passport photo sheet?</h2>
+
+  <p>
+    Upload your passport photograph in JPG, PNG or WebP format.
+    Select a photo size such as 35 × 45 mm or 2 × 2 inches.
+    Choose your paper size, orientation, print resolution and
+    number of photographs. Adjust the spacing and margins,
+    generate your print sheet and download it in PDF, JPG or PNG format.
+  </p>
+
+  <h2>Which paper sizes are supported?</h2>
+
+  <p>
+    RESAP supports A4, A5 and 4 × 6 inch paper sizes.
+    You can choose portrait or landscape orientation and
+    customize the layout according to your printing requirements.
+  </p>
+
+  <h2>Can I create multiple passport photos on one page?</h2>
+
+  <p>
+    Yes. You can specify how many photographs you want on the sheet.
+    RESAP automatically arranges them based on the selected photo
+    dimensions, paper size, margins and spacing.
+  </p>
+
+  <h2>Is the Passport Photo Sheet Maker free?</h2>
+
+  <p>
+    RESAP provides free document preparation tools without requiring
+    an account. You can create and download printable passport
+    photo sheets directly from your browser.
+  </p>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> RESAP. All rights reserved.</p>
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="searchModal">
+
+    <div class="search-modal-dialog">
+
+      <div class="search-modal-header">
+
+        <i data-lucide="search"></i>
+
+        <input
+          type="search"
+          class="search-modal-input"
+          placeholder="Search for a tool..."
+          aria-label="Search for a tool"
+        >
+
+        <span class="search-shortcut">ESC</span>
+
+      </div>
+
+      <div class="search-modal-results">
+        <div class="search-modal-empty">
+          Type to search for tools...
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/passport-sheet-maker.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://resap.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://resap.app/contact.html</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://resap.app/privacy.html</loc><priority>0.3</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://resap.app/terms.html</loc><priority>0.3</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://resap.app/tools/image-resizer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/image-compressor.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/image-converter.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/image-cropper.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/photo-collage.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/signature-resizer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/signature-compressor.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/passport-photo-editor.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/passport-sheet-maker.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/pdf-compressor.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/image-to-pdf.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/pdf-merger.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://resap.app/tools/pdf-splitter.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+</urlset>

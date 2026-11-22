@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f7f8f5">
+
+  <title>RESAP | Scan & Upload</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 24px 16px;
+      background: #f7f8f5;
+      color: #172521;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .mobile-page {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .mobile-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0 28px;
+    }
+
+    .brand {
+      color: #174d43;
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #8b9b73;
+    }
+
+    /* Main card */
+    .upload-card {
+      padding: 28px 22px;
+      background: #ffffff;
+      border: 1px solid #e4e9e4;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(23, 37, 33, 0.05);
+    }
+
+    .upload-heading {
+      margin-bottom: 26px;
+      text-align: center;
+    }
+
+    .upload-icon {
+      display: flex;
+      width: 58px;
+      height: 58px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border-radius: 16px;
+      background: #edf4ef;
+      color: #174d43;
+      font-size: 27px;
+    }
+
+    .upload-heading h1 {
+      margin-bottom: 10px;
+      color: #172521;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .upload-heading p {
+      color: #718079;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* File selection */
+    .file-section {
+      margin-bottom: 20px;
+    }
+
+    .file-section label {
+      display: block;
+      margin-bottom: 10px;
+      color: #263a32;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    #phoneFileInput {
+      display: block;
+      width: 100%;
+      min-height: 52px;
+      padding: 8px;
+      border: 1px dashed #b9c9c0;
+      border-radius: 10px;
+      background: #f8faf8;
+      color: #65736e;
+      font-size: 13px;
+    }
+
+    #phoneFileInput::file-selector-button {
+      min-height: 34px;
+      margin-right: 10px;
+      padding: 7px 12px;
+      border: 0;
+      border-radius: 7px;
+      background: #e7efe9;
+      color: #174d43;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .file-hint {
+      margin-top: 10px;
+      color: #89958f;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* Upload button */
+    #uploadFilesBtn {
+      display: block;
+      width: 100%;
+      min-height: 50px;
+      margin-top: 22px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #174d43;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    #uploadFilesBtn:hover:not(:disabled) {
+      background: #103b33;
+    }
+
+    #uploadFilesBtn:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    #uploadFilesBtn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* Status */
+    #uploadStatus {
+      margin-top: 18px;
+      padding: 13px 14px;
+      border-radius: 9px;
+      background: #f0f4f0;
+      color: #53645e;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    /* Footer */
+    .mobile-footer {
+      margin-top: 22px;
+      color: #89958f;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Small screens */
+    @media (max-width: 380px) {
+      body {
+        padding: 16px 12px;
+      }
+
+      .upload-card {
+        padding: 23px 16px;
+      }
+
+      .upload-heading h1 {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="mobile-page">
+
+    <header class="mobile-header">
+      <div class="brand">RES<span>AP</span></div>
+    </header>
+
+    <section class="upload-card">
+
+      <div class="upload-heading">
+        <div class="upload-icon" aria-hidden="true">↑</div>
+
+        <h1>Scan & Upload</h1>
+
+        <p>
+          Send photos and documents directly from your
+          phone to RESAP on your laptop.
+        </p>
+      </div>
+
+      <div class="file-section">
+        <label for="phoneFileInput">Choose your files</label>
+
+        <input
+          type="file"
+          id="phoneFileInput"
+          accept="image/jpeg,image/png,image/webp,application/pdf"
+          multiple
+        >
+
+        <p class="file-hint">
+          JPG, PNG, WebP or PDF · Maximum 50 MB per file
+        </p>
+      </div>
+
+      <button type="button" id="uploadFilesBtn">
+        Upload Files
+      </button>
+
+      <p id="uploadStatus" role="status" aria-live="polite">
+        Waiting for files.
+      </p>
+
+    </section>
+
+    <footer class="mobile-footer">
+      Your files are transferred to your connected RESAP session.
+      <br>
+      Keep your laptop connected to the same Wi-Fi network.
+    </footer>
+
+  </main>
+
+  <script type="module" src="/js/mobile-upload.js"></script>
+</body>
+</html>

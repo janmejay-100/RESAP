@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="RESAP helps you resize, compress, convert and prepare photos, signatures and PDF documents for online applications.">
+  <meta name="keywords" content="image resizer, image compressor, signature resizer, passport photo, PDF tools">
+  <meta name="author" content="RESAP">
+
+  <meta name="theme-color" content="#F7F8F5">
+
+  <title>RESAP — Your Documents, Application-Ready</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <a href="/" class="navbar-brand" aria-label="RESAP Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-name">RESAP</span>
+      </a>
+
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <button
+          class="nav-link all-tools-btn"
+          id="allToolsBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="megaMenu"
+        >
+          All Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          class="nav-icon-btn search-trigger-btn"
+          type="button"
+          aria-label="Search tools"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ALL TOOLS MEGA MENU -->
+    <div class="mega-menu-overlay" id="megaMenuOverlay"></div>
+
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-inner">
+
+        <div class="mega-menu-header">
+          <div>
+            <h2>Explore all tools</h2>
+            <p>Everything you need to prepare your documents.</p>
+          </div>
+
+          <div class="mega-menu-search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="megaMenuSearch"
+              placeholder="Search tools..."
+              aria-label="Search all tools"
+            >
+          </div>
+        </div>
+
+        <div class="mega-menu-body">
+
+          <div class="mega-menu-category">
+            <h3>Image Tools</h3>
+
+            <a href="/tools/image-resizer.html" class="mega-menu-item">
+              <i data-lucide="maximize-2"></i>
+              <span>
+                <span class="tool-name">Image Resizer</span>
+                <span class="tool-desc">Resize images to exact dimensions</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-compressor.html" class="mega-menu-item">
+              <i data-lucide="minimize-2"></i>
+              <span>
+                <span class="tool-name">Image Compressor</span>
+                <span class="tool-desc">Reduce image file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-converter.html" class="mega-menu-item">
+              <i data-lucide="repeat"></i>
+              <span>
+                <span class="tool-name">Image Format Converter</span>
+                <span class="tool-desc">Convert JPG, PNG and WebP</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-cropper.html" class="mega-menu-item">
+              <i data-lucide="crop"></i>
+              <span>
+                <span class="tool-name">Image Cropper</span>
+                <span class="tool-desc">Crop images easily</span>
+              </span>
+            </a>
+
+            <a href="/tools/photo-collage.html" class="mega-menu-item">
+              <i data-lucide="layout-grid"></i>
+              <span>
+                <span class="tool-name">Photo Collage Maker</span>
+                <span class="tool-desc">Create photo collages</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>Signature & Passport</h3>
+
+            <a href="/tools/signature-resizer.html" class="mega-menu-item">
+              <i data-lucide="pen-line"></i>
+              <span>
+                <span class="tool-name">Signature Resizer</span>
+                <span class="tool-desc">Resize signatures for applications</span>
+              </span>
+            </a>
+
+            <a href="/tools/signature-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus"></i>
+              <span>
+                <span class="tool-name">Signature Compressor</span>
+                <span class="tool-desc">Reduce signature file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-photo-editor.html" class="mega-menu-item">
+              <i data-lucide="user-square"></i>
+              <span>
+                <span class="tool-name">Passport Photo Editor</span>
+                <span class="tool-desc">Prepare passport-size photos</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-sheet-maker.html" class="mega-menu-item">
+              <i data-lucide="grid-3x3"></i>
+              <span>
+                <span class="tool-name">Passport Photo Sheet Maker</span>
+                <span class="tool-desc">Create printable photo sheets</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>PDF Tools</h3>
+
+            <a href="/tools/pdf-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus-2"></i>
+              <span>
+                <span class="tool-name">PDF Compressor</span>
+                <span class="tool-desc">Reduce PDF file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-to-pdf.html" class="mega-menu-item">
+              <i data-lucide="file-plus-2"></i>
+              <span>
+                <span class="tool-name">Image to PDF</span>
+                <span class="tool-desc">Convert images into PDF</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-merger.html" class="mega-menu-item">
+              <i data-lucide="files"></i>
+              <span>
+                <span class="tool-name">PDF Merger</span>
+                <span class="tool-desc">Combine multiple PDF files</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-splitter.html" class="mega-menu-item">
+              <i data-lucide="scissors"></i>
+              <span>
+                <span class="tool-name">PDF Splitter</span>
+                <span class="tool-desc">Split PDF documents</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/" class="mobile-nav-link">Home</a>
+
+      <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Image Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="mobile-category-links">
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/image-converter.html">Image Converter</a>
+          <a href="/tools/image-cropper.html">Image Cropper</a>
+          <a href="/tools/photo-collage.html">Photo Collage Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Signature & Passport
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="mobile-category-links">
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/signature-compressor.html">Signature Compressor</a>
+          <a href="/tools/passport-photo-editor.html">Passport Photo Editor</a>
+          <a href="/tools/passport-sheet-maker.html">Passport Sheet Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          PDF Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="mobile-category-links">
+          <a href="/tools/pdf-compressor.html">PDF Compressor</a>
+          <a href="/tools/image-to-pdf.html">Image to PDF</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+          <a href="/tools/pdf-splitter.html">PDF Splitter</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <span class="section-label">Simple. Fast. Application-ready.</span>
+
+          <h1 class="heading-xl">
+            Your documents,<br>
+            <span class="text-accent">application-ready</span><br>
+            in seconds.
+          </h1>
+
+          <p class="hero-description">
+            Resize, compress and convert photos, signatures and PDFs
+            without complicated software. Prepare your documents
+            for online applications in one place.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#quick-tools" class="btn btn-primary btn-lg">
+              Explore Tools
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <button class="btn btn-secondary btn-lg" id="randomToolBtn" type="button">
+              <i data-lucide="shuffle"></i>
+              Try a Random Tool
+            </button>
+          </div>
+
+          <div class="hero-benefits">
+            <span><i data-lucide="check-circle"></i> Free to use</span>
+            <span><i data-lucide="shield-check"></i> Privacy focused</span>
+            <span><i data-lucide="zap"></i> Simple workflow</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <div class="mockup-header">
+              <div>
+                <span class="mockup-label">IMAGE RESIZER</span>
+                <h3>Prepare your photo</h3>
+              </div>
+              <i data-lucide="image"></i>
+            </div>
+
+            <div class="mockup-preview">
+              <div class="mockup-photo">
+                <i data-lucide="user-round"></i>
+                <span>Photo preview</span>
+              </div>
+            </div>
+
+            <div class="mockup-settings">
+              <div class="mockup-setting">
+                Width
+                <span>300 px</span>
+              </div>
+              <div class="mockup-setting">
+                Height
+                <span>400 px</span>
+              </div>
+            </div>
+
+            <div class="mockup-result">
+              <span class="mockup-result-text">
+                <i data-lucide="check-circle"></i>
+                Ready to download
+              </span>
+              <span class="mockup-download-btn">Download</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- QUICK TOOLS -->
+    <section class="quick-tools" id="quick-tools">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Get started</span>
+          <h2 class="section-title">Popular document tools</h2>
+          <p class="section-desc">
+            Start with the tools people commonly need for online applications.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+
+          <a href="/tools/image-resizer.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="maximize-2"></i></div>
+            <span class="tool-card-name">Image Resizer</span>
+            <span class="tool-card-desc">Set exact image dimensions.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/image-compressor.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="minimize-2"></i></div>
+            <span class="tool-card-name">Image Compressor</span>
+            <span class="tool-card-desc">Reduce image file size.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/signature-resizer.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="pen-line"></i></div>
+            <span class="tool-card-name">Signature Resizer</span>
+            <span class="tool-card-desc">Prepare signatures for forms.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/passport-photo-editor.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="user-round"></i></div>
+            <span class="tool-card-name">Passport Photo Editor</span>
+            <span class="tool-card-desc">Prepare passport-size photos.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/image-to-pdf.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="file-plus-2"></i></div>
+            <span class="tool-card-name">Image to PDF</span>
+            <span class="tool-card-desc">Convert images into PDF files.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/pdf-merger.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="files"></i></div>
+            <span class="tool-card-name">PDF Merger</span>
+            <span class="tool-card-desc">Combine multiple PDF files.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/pdf-compressor.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="file-minus-2"></i></div>
+            <span class="tool-card-name">PDF Compressor</span>
+            <span class="tool-card-desc">Reduce PDF file size.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a href="/tools/pdf-splitter.html" class="tool-card">
+            <div class="tool-card-icon"><i data-lucide="scissors"></i></div>
+            <span class="tool-card-name">PDF Splitter</span>
+            <span class="tool-card-desc">Split a PDF into pages.</span>
+            <span class="tool-card-arrow">Open tool <i data-lucide="arrow-right"></i></span>
+          </a>
+
+        </div>
+
+        <div class="view-all-tools">
+          <button class="btn btn-secondary" id="allToolsBottomBtn" type="button">
+            Browse all tools
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works section" id="how-it-works">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Three simple steps</span>
+          <h2 class="section-title">How RESAP works</h2>
+          <p class="section-desc">
+            Prepare your documents without unnecessary steps.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <h3>Choose a tool</h3>
+            <p>Select the image, signature or PDF tool you need.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">02</div>
+            <h3>Upload your document</h3>
+            <p>Choose a file and enter the required settings.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <h3>Download the result</h3>
+            <p>Process your document and download the prepared file.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Why RESAP</span>
+          <h2 class="section-title">Document preparation made simpler</h2>
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="layers"></i></div>
+            <h3>Tools in one place</h3>
+            <p>Access image, signature and PDF utilities from one platform.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Easy to use</h3>
+            <p>Clear controls and straightforward workflows for everyday tasks.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="shield-check"></i></div>
+            <h3>Privacy conscious</h3>
+            <p>We aim to process supported files in your browser wherever possible.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq-section section" id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">FAQs</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-desc">
+            A few things to know before using RESAP.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              What is RESAP?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>RESAP is a document utility platform for resizing, compressing and converting images and PDF files for online applications.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              Do I need to create an account?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>The platform is designed to let users access its tools without creating an account.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              Can I use RESAP on my mobile phone?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>RESAP is being built with responsive layouts for desktop, tablet and mobile browsers.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              Are my uploaded files stored?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>File handling depends on the individual tool. Check the relevant tool's privacy information before uploading sensitive documents.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="/" class="navbar-brand">
+            <span class="brand-icon">R</span>
+            <span class="brand-name">RESAP</span>
+          </a>
+
+          <p>
+            Your documents, application-ready in seconds.
+            Simple tools for everyday document preparation.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Tools</h3>
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>RESAP</h3>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> RESAP. All rights reserved.</p>
+        <p>Resize. Prepare. Apply.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-dialog">
+
+      <div class="search-modal-header">
+        <i data-lucide="search"></i>
+        <input
+          type="search"
+          class="search-modal-input"
+          placeholder="Search for a tool..."
+          aria-label="Search for a tool"
+        >
+        <span class="search-shortcut">ESC</span>
+      </div>
+
+      <div class="search-modal-results">
+        <div class="search-modal-empty">Type to search for tools...</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script type="module" src="/js/main.js"></script>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    document.getElementById('allToolsBottomBtn')?.addEventListener('click', () => {
+      document.getElementById('allToolsBtn')?.click();
+    });
+  </script>
+
+</body>
+</html>

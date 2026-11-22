@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Split PDF documents online with RESAP. Extract selected pages or divide a PDF into smaller files."
+  >
+
+  <title>PDF Splitter — RESAP</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/tools.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <a href="/" class="navbar-brand" aria-label="RESAP Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-name">RESAP</span>
+      </a>
+
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <button
+          class="nav-link all-tools-btn"
+          id="allToolsBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="megaMenu"
+        >
+          All Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <a href="/#how-it-works" class="nav-link">How It Works</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          class="nav-icon-btn search-trigger-btn"
+          type="button"
+          aria-label="Search tools"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MEGA MENU -->
+    <div class="mega-menu-overlay" id="megaMenuOverlay"></div>
+
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-inner">
+
+        <div class="mega-menu-header">
+          <div>
+            <h2>Explore all tools</h2>
+            <p>Everything you need to prepare your documents.</p>
+          </div>
+
+          <div class="mega-menu-search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="megaMenuSearch"
+              placeholder="Search tools..."
+              aria-label="Search all tools"
+            >
+          </div>
+        </div>
+
+        <div class="mega-menu-body">
+
+          <div class="mega-menu-category">
+            <h3>Image Tools</h3>
+
+            <a href="/tools/image-resizer.html" class="mega-menu-item">
+              <i data-lucide="maximize-2"></i>
+              <span>
+                <span class="tool-name">Image Resizer</span>
+                <span class="tool-desc">Resize images to exact dimensions</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-compressor.html" class="mega-menu-item">
+              <i data-lucide="minimize-2"></i>
+              <span>
+                <span class="tool-name">Image Compressor</span>
+                <span class="tool-desc">Reduce image file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-converter.html" class="mega-menu-item">
+              <i data-lucide="repeat"></i>
+              <span>
+                <span class="tool-name">Image Format Converter</span>
+                <span class="tool-desc">Convert JPG, PNG and WebP</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-cropper.html" class="mega-menu-item">
+              <i data-lucide="crop"></i>
+              <span>
+                <span class="tool-name">Image Cropper</span>
+                <span class="tool-desc">Crop images easily</span>
+              </span>
+            </a>
+
+            <a href="/tools/photo-collage.html" class="mega-menu-item">
+              <i data-lucide="layout-grid"></i>
+              <span>
+                <span class="tool-name">Photo Collage Maker</span>
+                <span class="tool-desc">Create photo collages</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>Signature & Passport</h3>
+
+            <a href="/tools/signature-resizer.html" class="mega-menu-item">
+              <i data-lucide="pen-line"></i>
+              <span>
+                <span class="tool-name">Signature Resizer</span>
+                <span class="tool-desc">Resize signatures for applications</span>
+              </span>
+            </a>
+
+            <a href="/tools/signature-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus"></i>
+              <span>
+                <span class="tool-name">Signature Compressor</span>
+                <span class="tool-desc">Reduce signature file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-photo-editor.html" class="mega-menu-item">
+              <i data-lucide="user-square"></i>
+              <span>
+                <span class="tool-name">Passport Photo Editor</span>
+                <span class="tool-desc">Prepare passport-size photos</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-sheet-maker.html" class="mega-menu-item">
+              <i data-lucide="grid-3x3"></i>
+              <span>
+                <span class="tool-name">Passport Photo Sheet Maker</span>
+                <span class="tool-desc">Create printable photo sheets</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="mega-menu-category">
+            <h3>PDF Tools</h3>
+
+            <a href="/tools/pdf-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus-2"></i>
+              <span>
+                <span class="tool-name">PDF Compressor</span>
+                <span class="tool-desc">Reduce PDF file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-to-pdf.html" class="mega-menu-item">
+              <i data-lucide="file-plus-2"></i>
+              <span>
+                <span class="tool-name">Image to PDF</span>
+                <span class="tool-desc">Convert images into PDF</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-merger.html" class="mega-menu-item">
+              <i data-lucide="files"></i>
+              <span>
+                <span class="tool-name">PDF Merger</span>
+                <span class="tool-desc">Combine multiple PDF files</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-splitter.html" class="mega-menu-item">
+              <i data-lucide="scissors"></i>
+              <span>
+                <span class="tool-name">PDF Splitter</span>
+                <span class="tool-desc">Split PDF documents</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="/#faq" class="mobile-nav-link">FAQ</a>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Image Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/image-converter.html">Image Converter</a>
+          <a href="/tools/image-cropper.html">Image Cropper</a>
+          <a href="/tools/photo-collage.html">Photo Collage Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Signature & Passport
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/signature-compressor.html">Signature Compressor</a>
+          <a href="/tools/passport-photo-editor.html">Passport Photo Editor</a>
+          <a href="/tools/passport-sheet-maker.html">Passport Sheet Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          PDF Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/pdf-compressor.html">PDF Compressor</a>
+          <a href="/tools/image-to-pdf.html">Image to PDF</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+          <a href="/tools/pdf-splitter.html">PDF Splitter</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="tool-page">
+    <div class="container">
+
+      <div class="tool-header">
+
+        <a href="/" class="back-link">
+          <i data-lucide="arrow-left"></i>
+          Back to RESAP
+        </a>
+
+        <span class="section-label">PDF Tools</span>
+
+        <h1>PDF Splitter</h1>
+
+        <p>
+          Split a PDF document into smaller files or extract specific pages.
+          Choose how you want to divide your document.
+        </p>
+
+      </div>
+
+      <div class="tool-workspace">
+
+        <!-- MAIN AREA -->
+        <section class="tool-main">
+
+          <!-- UPLOAD -->
+          <div class="tool-panel">
+
+            <h2>Upload your PDF</h2>
+
+            <p class="panel-description">
+              Select one PDF document. Maximum file size: 50 MB.
+            </p>
+
+            <div class="upload-area" id="pdfSplitUploadArea">
+
+              <input
+                type="file"
+                id="pdfSplitInput"
+                accept="application/pdf,.pdf"
+                hidden
+              >
+
+              <div class="upload-icon">
+                <i data-lucide="file-up"></i>
+              </div>
+
+              <h3>Drop your PDF file here</h3>
+
+              <p>or click to browse your device</p>
+
+              <span class="upload-hint">
+                Supported format: PDF
+              </span>
+
+            </div>
+
+            <div class="pdf-split-file-info" id="pdfSplitFileInfo" hidden>
+              <div>
+                <strong id="pdfSplitFileName">document.pdf</strong>
+                <span id="pdfSplitFileDetails">—</span>
+              </div>
+
+              <button type="button" id="removePdfSplitFileBtn" aria-label="Remove PDF">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+
+          </div>
+          <!-- SCAN & UPLOAD FROM PHONE -->
+<div class="scan-upload-panel" id="pdfSplitScanUploadPanel">
+
+  <button
+    type="button"
+    class="scan-upload-btn"
+    id="pdfSplitScanUploadBtn"
+  >
+    <i data-lucide="smartphone"></i>
+    Scan & Upload from Phone
+  </button>
+
+  <p
+    class="scan-upload-status"
+    id="pdfSplitScanUploadStatus"
+    role="status"
+    aria-live="polite"
+  >
+    Upload your PDF directly from your phone.
+  </p>
+
+  <div
+    class="scan-upload-qr-container"
+    id="pdfSplitScanQrContainer"
+    hidden
+  >
+    <canvas id="pdfSplitScanQrCode"></canvas>
+
+    <p class="scan-upload-expiry" id="pdfSplitScanExpiry"></p>
+  </div>
+
+</div>
+
+          <!-- PDF PREVIEW -->
+          <div class="tool-panel" id="pdfSplitPreviewPanel" hidden>
+
+            <h2>PDF preview</h2>
+
+            <p class="panel-description">
+              Review your uploaded document before splitting.
+            </p>
+
+            <div class="pdf-preview-viewer pdf-split-preview-viewer">
+              <iframe
+                id="pdfSplitPreviewFrame"
+                title="Uploaded PDF preview"
+              ></iframe>
+            </div>
+
+          </div>
+
+          <!-- SPLIT RESULTS -->
+          <div class="tool-panel" id="pdfSplitResultsPanel" hidden>
+
+            <div class="panel-heading-row">
+              <div>
+                <h2>Split PDF files</h2>
+                <p class="panel-description">
+                  Your generated PDF files are ready.
+                </p>
+              </div>
+            </div>
+
+            <div id="pdfSplitResults" class="pdf-split-results">
+              <!-- Results generated by JavaScript -->
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- SETTINGS SIDEBAR -->
+        <aside class="tool-sidebar">
+
+          <div class="tool-panel">
+
+            <h2>Split settings</h2>
+
+            <p class="panel-description">
+              Choose how you want to divide your PDF.
+            </p>
+
+            <div class="form-group">
+
+              <label for="pdfSplitMode">Splitting method</label>
+
+              <select id="pdfSplitMode" disabled>
+                <option value="ranges">Extract selected pages</option>
+                <option value="each">Split every page separately</option>
+                <option value="chunks">Split into groups of pages</option>
+              </select>
+
+            </div>
+
+            <!-- PAGE RANGES -->
+            <div class="form-group" id="pdfSplitRangesGroup">
+
+              <label for="pdfSplitRanges">Page numbers</label>
+
+              <input
+                type="text"
+                id="pdfSplitRanges"
+                placeholder="Example: 1-3, 5, 8-10"
+                disabled
+              >
+
+              <small class="field-hint">
+                Enter page numbers or ranges separated by commas.
+              </small>
+
+            </div>
+
+            <!-- PAGES PER FILE -->
+            <div class="form-group" id="pdfSplitChunksGroup" hidden>
+
+              <label for="pdfSplitPagesPerFile">Pages per PDF file</label>
+
+              <input
+                type="number"
+                id="pdfSplitPagesPerFile"
+                min="1"
+                max="100"
+                value="5"
+                disabled
+              >
+
+              <small class="field-hint">
+                Each output file will contain this many pages, except possibly the last one.
+              </small>
+
+            </div>
+
+            <!-- OUTPUT NAME -->
+            <div class="form-group">
+
+              <label for="pdfSplitOutputName">Output file name</label>
+
+              <input
+                type="text"
+                id="pdfSplitOutputName"
+                value="RESAP-split-document"
+                maxlength="80"
+                placeholder="Enter file name"
+                disabled
+              >
+
+            </div>
+
+            <button
+              class="btn btn-primary btn-block"
+              id="splitPdfBtn"
+              type="button"
+              disabled
+            >
+              <i data-lucide="scissors"></i>
+              Split PDF
+            </button>
+
+            <button
+              class="btn btn-secondary btn-block"
+              id="resetPdfSplitBtn"
+              type="button"
+              disabled
+            >
+              Reset
+            </button>
+
+            <p
+              class="tool-status"
+              id="pdfSplitStatus"
+              role="status"
+              aria-live="polite"
+            >
+              Upload a PDF file to begin.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- INFORMATION -->
+      <section class="tool-seo-content">
+
+        <h2>How to split PDF files</h2>
+
+        <p>
+          Upload your PDF document, choose a splitting method, and click
+          Split PDF. Download the generated files individually.
+        </p>
+
+        <h2>Can I extract specific PDF pages?</h2>
+
+        <p>
+          Yes. Enter the page numbers or ranges you want to extract.
+          For example, 1-3, 5, 8-10.
+        </p>
+
+        <h2>Can I split every page separately?</h2>
+
+        <p>
+          Yes. Select the option to split every page separately.
+          Each page will be saved as an individual PDF file.
+        </p>
+
+        <h2>Is this PDF splitter free?</h2>
+
+        <p>
+          RESAP provides free document preparation tools without requiring
+          an account.
+        </p>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="currentYear"></span> RESAP. All rights reserved.
+        </p>
+
+        <a href="/">Back to Home</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="searchModal">
+
+    <div class="search-modal-dialog">
+
+      <div class="search-modal-header">
+
+        <i data-lucide="search"></i>
+
+        <input
+          type="search"
+          class="search-modal-input"
+          placeholder="Search for a tool..."
+          aria-label="Search for a tool"
+        >
+
+        <span class="search-shortcut">ESC</span>
+
+      </div>
+
+      <div class="search-modal-results">
+        <div class="search-modal-empty">
+          Type to search for tools...
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.getElementById('currentYear').textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/pdf-splitter.js"></script>
+
+</body>
+</html>

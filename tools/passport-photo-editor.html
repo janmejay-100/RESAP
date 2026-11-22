@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Create passport-size photographs for online applications. Crop, resize, adjust and prepare your photos with RESAP."
+  >
+
+  <title>Passport Photo Editor - RESAP</title>
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/tools.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <a href="/" class="navbar-brand" aria-label="RESAP Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-name">RESAP</span>
+      </a>
+
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <button
+          class="nav-link all-tools-btn"
+          id="allToolsBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="megaMenu"
+        >
+          All Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <a href="/#how-it-works" class="nav-link">How It Works</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          class="nav-icon-btn search-trigger-btn"
+          type="button"
+          aria-label="Search tools"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ALL TOOLS MEGA MENU -->
+    <div class="mega-menu-overlay" id="megaMenuOverlay"></div>
+
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-inner">
+
+        <div class="mega-menu-header">
+          <div>
+            <h2>Explore all tools</h2>
+            <p>Everything you need to prepare your documents.</p>
+          </div>
+
+          <div class="mega-menu-search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="megaMenuSearch"
+              placeholder="Search tools..."
+              aria-label="Search all tools"
+            >
+          </div>
+        </div>
+
+        <div class="mega-menu-body">
+
+          <!-- IMAGE TOOLS -->
+          <div class="mega-menu-category">
+            <h3>Image Tools</h3>
+
+            <a href="/tools/image-resizer.html" class="mega-menu-item">
+              <i data-lucide="maximize-2"></i>
+              <span>
+                <span class="tool-name">Image Resizer</span>
+                <span class="tool-desc">Resize images to exact dimensions</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-compressor.html" class="mega-menu-item">
+              <i data-lucide="minimize-2"></i>
+              <span>
+                <span class="tool-name">Image Compressor</span>
+                <span class="tool-desc">Reduce image file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-converter.html" class="mega-menu-item">
+              <i data-lucide="repeat"></i>
+              <span>
+                <span class="tool-name">Image Format Converter</span>
+                <span class="tool-desc">Convert JPG, PNG and WebP</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-cropper.html" class="mega-menu-item">
+              <i data-lucide="crop"></i>
+              <span>
+                <span class="tool-name">Image Cropper</span>
+                <span class="tool-desc">Crop images easily</span>
+              </span>
+            </a>
+
+            <a href="/tools/photo-collage.html" class="mega-menu-item">
+              <i data-lucide="layout-grid"></i>
+              <span>
+                <span class="tool-name">Photo Collage Maker</span>
+                <span class="tool-desc">Create photo collages</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- SIGNATURE AND PASSPORT TOOLS -->
+          <div class="mega-menu-category">
+            <h3>Signature & Passport</h3>
+
+            <a href="/tools/signature-resizer.html" class="mega-menu-item">
+              <i data-lucide="pen-line"></i>
+              <span>
+                <span class="tool-name">Signature Resizer</span>
+                <span class="tool-desc">Resize signatures for applications</span>
+              </span>
+            </a>
+
+            <a href="/tools/signature-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus"></i>
+              <span>
+                <span class="tool-name">Signature Compressor</span>
+                <span class="tool-desc">Reduce signature file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-photo-editor.html" class="mega-menu-item">
+              <i data-lucide="user-square"></i>
+              <span>
+                <span class="tool-name">Passport Photo Editor</span>
+                <span class="tool-desc">Prepare passport-size photos</span>
+              </span>
+            </a>
+
+            <a href="/tools/passport-sheet-maker.html" class="mega-menu-item">
+              <i data-lucide="grid-3x3"></i>
+              <span>
+                <span class="tool-name">Passport Photo Sheet Maker</span>
+                <span class="tool-desc">Create printable photo sheets</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- PDF TOOLS -->
+          <div class="mega-menu-category">
+            <h3>PDF Tools</h3>
+
+            <a href="/tools/pdf-compressor.html" class="mega-menu-item">
+              <i data-lucide="file-minus-2"></i>
+              <span>
+                <span class="tool-name">PDF Compressor</span>
+                <span class="tool-desc">Reduce PDF file size</span>
+              </span>
+            </a>
+
+            <a href="/tools/image-to-pdf.html" class="mega-menu-item">
+              <i data-lucide="file-plus-2"></i>
+              <span>
+                <span class="tool-name">Image to PDF</span>
+                <span class="tool-desc">Convert images into PDF</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-merger.html" class="mega-menu-item">
+              <i data-lucide="files"></i>
+              <span>
+                <span class="tool-name">PDF Merger</span>
+                <span class="tool-desc">Combine multiple PDF files</span>
+              </span>
+            </a>
+
+            <a href="/tools/pdf-splitter.html" class="mega-menu-item">
+              <i data-lucide="scissors"></i>
+              <span>
+                <span class="tool-name">PDF Splitter</span>
+                <span class="tool-desc">Split PDF documents</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="/#faq" class="mobile-nav-link">FAQ</a>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Image Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/image-resizer.html">Image Resizer</a>
+          <a href="/tools/image-compressor.html">Image Compressor</a>
+          <a href="/tools/image-converter.html">Image Converter</a>
+          <a href="/tools/image-cropper.html">Image Cropper</a>
+          <a href="/tools/photo-collage.html">Photo Collage Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          Signature & Passport
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/signature-resizer.html">Signature Resizer</a>
+          <a href="/tools/signature-compressor.html">Signature Compressor</a>
+          <a href="/tools/passport-photo-editor.html">Passport Photo Editor</a>
+          <a href="/tools/passport-sheet-maker.html">Passport Photo Sheet Maker</a>
+        </div>
+      </div>
+
+      <div class="mobile-category">
+        <button class="mobile-category-header" type="button">
+          PDF Tools
+          <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="mobile-category-links">
+          <a href="/tools/pdf-compressor.html">PDF Compressor</a>
+          <a href="/tools/image-to-pdf.html">Image to PDF</a>
+          <a href="/tools/pdf-merger.html">PDF Merger</a>
+          <a href="/tools/pdf-splitter.html">PDF Splitter</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="tool-page">
+
+    <!-- PAGE HEADER -->
+    <section class="tool-header">
+      <div class="container">
+
+        <a href="/" class="back-link">← Back to Home</a>
+
+        <span class="tool-category">Signature & Passport</span>
+
+        <h1>Passport Photo Editor</h1>
+
+        <p>
+          Prepare passport-size photographs for online applications.
+          Crop, resize and adjust your photo before downloading.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- TOOL WORKSPACE -->
+    <section class="tool-workspace container">
+
+      <div class="tool-layout">
+
+        <!-- LEFT: SETTINGS PANEL -->
+        <div class="tool-settings-panel">
+
+          <h2>Upload Photograph</h2>
+
+          <p class="panel-description">
+            Upload a clear front-facing photograph.
+          </p>
+
+          <!-- UPLOAD AREA -->
+          <div class="upload-area" id="passportUploadArea">
+
+            <input
+              type="file"
+              id="passportImageInput"
+              accept="image/jpeg,image/png,image/webp"
+              hidden
+            >
+
+            <div class="upload-content">
+
+              <div class="upload-icon">↑</div>
+
+              <h3>Drag and drop your photograph</h3>
+
+              <p>or click to browse files</p>
+
+              <span>
+                JPG, PNG or WebP · Maximum 10 MB
+              </span>
+
+            </div>
+          </div>
+          <!-- SCAN & UPLOAD FROM PHONE -->
+<div class="scan-upload-panel">
+
+  <button
+    class="btn btn-secondary"
+    id="scanUploadBtn"
+    type="button"
+  >
+    <i data-lucide="smartphone"></i>
+    Scan & Upload from Phone
+  </button>
+
+  <p id="scanUploadStatus">
+    Upload your photograph directly from your phone.
+  </p>
+
+  <div id="scanQrContainer" hidden>
+    <canvas id="scanQrCode"></canvas>
+    <p id="scanExpiry"></p>
+  </div>
+
+</div>
+
+          <!-- GENERATE PHOTO BUTTON -->
+          <div class="passport-generate-top">
+            <button
+              id="generatePassportBtn"
+              class="btn btn-primary"
+              disabled
+            >
+              Generate Photo
+            </button>
+          </div>
+
+          <!-- PHOTO DIMENSIONS -->
+          <div class="settings-group">
+
+            <h3>Photo Dimensions</h3>
+
+            <div class="form-group">
+              <label for="passportPreset">
+                Select photo size
+              </label>
+
+              <select id="passportPreset" disabled>
+                <option value="35x45">35 × 45 mm</option>
+                <option value="2x2">2 × 2 inches</option>
+                <option value="25x35">25 × 35 mm</option>
+                <option value="custom">Custom dimensions</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="passportWidth">Width (mm)</label>
+
+                <input
+                  type="number"
+                  id="passportWidth"
+                  min="10"
+                  max="100"
+                  value="35"
+                  disabled
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="passportHeight">Height (mm)</label>
+
+                <input
+                  type="number"
+                  id="passportHeight"
+                  min="10"
+                  max="100"
+                  value="45"
+                  disabled
+                >
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="passportDpi">Resolution (DPI)</label>
+
+              <select id="passportDpi" disabled>
+                <option value="150">150 DPI</option>
+                <option value="200">200 DPI</option>
+                <option value="300" selected>300 DPI</option>
+                <option value="600">600 DPI</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <!-- BACKGROUND -->
+          <div class="settings-group">
+
+            <h3>Background Color</h3>
+
+            <div class="form-group">
+              <label for="passportBackground">
+                Select background
+              </label>
+
+              <select id="passportBackground" disabled>
+                <option value="white">White</option>
+                <option value="lightgray">Light Gray</option>
+                <option value="blue">Light Blue</option>
+                <option value="custom">Custom Color</option>
+              </select>
+            </div>
+
+            <div
+              class="form-group"
+              id="passportCustomColorGroup"
+              hidden
+            >
+              <label for="passportCustomColor">
+                Custom background color
+              </label>
+
+              <input
+                type="color"
+                id="passportCustomColor"
+                value="#ffffff"
+                disabled
+              >
+            </div>
+
+          </div>
+
+
+          <!-- IMAGE ADJUSTMENTS -->
+          <div class="settings-group">
+
+            <h3>Image Adjustments</h3>
+
+            <div class="form-group">
+              <label for="passportBrightness">
+                Brightness:
+                <span id="passportBrightnessValue">100%</span>
+              </label>
+
+              <input
+                type="range"
+                id="passportBrightness"
+                min="50"
+                max="150"
+                value="100"
+                disabled
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="passportContrast">
+                Contrast:
+                <span id="passportContrastValue">100%</span>
+              </label>
+
+              <input
+                type="range"
+                id="passportContrast"
+                min="50"
+                max="150"
+                value="100"
+                disabled
+              >
+            </div>
+
+          </div>
+
+
+          <!-- OUTPUT SETTINGS -->
+          <div class="settings-group">
+
+            <h3>Output Settings</h3>
+
+            <div class="form-group">
+              <label for="passportOutputFormat">
+                Image format
+              </label>
+
+              <select id="passportOutputFormat" disabled>
+                <option value="image/jpeg">JPG</option>
+                <option value="image/png">PNG</option>
+                <option value="image/webp">WebP</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="passportQuality">
+                Image quality:
+                <span id="passportQualityValue">90%</span>
+              </label>
+
+              <input
+                type="range"
+                id="passportQuality"
+                min="10"
+                max="100"
+                value="90"
+                disabled
+              >
+            </div>
+
+          </div>
+
+
+          <!-- RESET BUTTON -->
+          <div class="tool-actions passport-actions">
+
+            <button
+              id="resetPassportBtn"
+              class="btn btn-secondary"
+              disabled
+            >
+              Reset
+            </button>
+
+          </div>
+
+
+          <!-- STATUS -->
+          <p
+            id="passportStatus"
+            class="tool-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+
+        <!-- RIGHT: PREVIEW PANEL -->
+        <div class="tool-preview-panel">
+
+          <div class="preview-heading">
+            <div>
+              <h2>Photo Preview</h2>
+
+              <p>
+                View your original and prepared passport photograph.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- ORIGINAL PHOTO -->
+          <div class="preview-box">
+
+            <h3>Original Photograph</h3>
+
+            <div class="image-preview">
+
+              <img
+                id="passportOriginalPreview"
+                alt="Original photograph preview"
+                hidden
+              >
+
+              <span id="passportOriginalPlaceholder">
+                Your uploaded photograph will appear here
+              </span>
+
+            </div>
+
+            <p id="passportOriginalInfo">
+              No photograph uploaded
+            </p>
+
+          </div>
+<!-- CROP EDITOR -->
+<div class="preview-box" id="passportCropSection" hidden>
+
+  <h3>Adjust Photograph Crop</h3>
+
+  <p class="panel-description">
+    Drag your photograph inside the frame to adjust its position.
+  </p>
+
+  <div class="passport-crop-wrapper">
+
+    <canvas
+      id="passportCropCanvas"
+      aria-label="Interactive passport photo crop editor"
+    ></canvas>
+
+    <span id="passportCropPlaceholder">
+      Upload a photograph to start cropping.
+    </span>
+
+  </div>
+
+  <div class="form-group passport-zoom-control">
+
+    <label for="passportZoom">
+      Zoom:
+      <span id="passportZoomValue">100%</span>
+    </label>
+
+    <input
+      type="range"
+      id="passportZoom"
+      min="100"
+      max="200"
+      value="100"
+      step="1"
+      disabled
+    >
+
+  </div>
+
+  <button
+    type="button"
+    id="passportResetCropBtn"
+    class="btn btn-secondary"
+    disabled
+  >
+    Reset Crop
+  </button>
+
+</div>
+<!-- PASSPORT PHOTO CROP EDITOR -->
+<div
+  class="preview-box passport-crop-section"
+  id="passportCropSection"
+  hidden
+>
+
+  <div class="passport-crop-heading">
+    <div>
+      <h3>Adjust Photo Position</h3>
+      <p>Drag your photograph to position it inside the crop frame.</p>
+    </div>
+
+    <button
+      type="button"
+      id="passportResetCropBtn"
+      class="btn btn-secondary"
+      disabled
+    >
+      Reset Crop
+    </button>
+  </div>
+
+  <div class="passport-crop-container">
+    <canvas
+      id="passportCropCanvas"
+      aria-label="Interactive photograph crop editor"
+    ></canvas>
+
+    <div id="passportCropPlaceholder">
+      Upload a photograph to start cropping.
+    </div>
+  </div>
+
+  <div class="passport-crop-controls">
+
+    <div class="form-group">
+      <label for="passportZoom">
+        Zoom: <span id="passportZoomValue">100%</span>
+      </label>
+
+      <input
+        type="range"
+        id="passportZoom"
+        min="100"
+        max="200"
+        value="100"
+        step="1"
+        disabled
+      >
+    </div>
+
+    <p class="passport-crop-hint">
+      Adjust the frame to include your head and shoulders.
+      Keep your face centered and avoid cutting off your head.
+    </p>
+
+  </div>
+
+</div>
+<!-- END PASSPORT PHOTO CROP EDITOR -->
+
+
+
+          <!-- FINAL PHOTO -->
+          <div class="preview-box">
+
+            <h3>Passport Photo</h3>
+
+            <div class="image-preview">
+
+              <canvas
+                id="passportResultCanvas"
+                hidden
+              ></canvas>
+
+              <span id="passportResultPlaceholder">
+                Your prepared photograph will appear here
+              </span>
+
+            </div>
+
+            <p id="passportResultInfo">
+              No output generated
+            </p>
+
+          </div>
+
+
+          <!-- OUTPUT DETAILS -->
+          <div
+            class="settings-group"
+            id="passportOutputSummary"
+            hidden
+          >
+
+            <h3>Output Details</h3>
+
+            <p id="passportOutputDimensions"></p>
+
+            <p id="passportOutputSize"></p>
+
+          </div>
+
+
+          <!-- DOWNLOAD -->
+          <button
+            id="downloadPassportBtn"
+            class="btn btn-primary"
+            disabled
+          >
+            Download Passport Photo
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+<!-- SEO CONTENT -->
+<section class="tool-seo-content">
+
+  <h2>What is a Passport Photo Editor?</h2>
+
+  <p>
+    RESAP Passport Photo Editor helps you prepare passport-size
+    photographs for online applications, examinations, government
+    forms and other official document requirements. Upload your
+    photograph and adjust its dimensions to create an application-ready image.
+  </p>
+
+  <h2>How to resize a passport-size photo?</h2>
+
+  <p>
+    Upload your photograph in JPG, PNG or WebP format.
+    Choose the required photo dimensions, adjust the width and
+    height, and maintain the aspect ratio if needed.
+    Preview your edited photograph and download the final image.
+  </p>
+
+  <h2>What passport photo sizes are supported?</h2>
+
+  <p>
+    You can prepare photographs according to the dimensions
+    required by your application. Always check the official
+    application guidelines for the correct photo dimensions,
+    file size and format before uploading your photograph.
+  </p>
+
+  <h2>Can I use the edited photo for government applications?</h2>
+
+  <p>
+    Yes. You can use the prepared photograph for applications
+    that accept its dimensions and file format. However, different
+    government examinations and application portals may have
+    different requirements, so verify those requirements before submission.
+  </p>
+
+  <h2>Is the Passport Photo Editor free?</h2>
+
+  <p>
+    RESAP provides free document preparation tools without
+    requiring an account. You can prepare and download your
+    passport-size photograph directly from your browser.
+  </p>
+
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> RESAP. All rights reserved.</p>
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="searchModal">
+
+    <div class="search-modal-dialog">
+
+      <div class="search-modal-header">
+
+        <i data-lucide="search"></i>
+
+        <input
+          type="search"
+          class="search-modal-input"
+          placeholder="Search for a tool..."
+          aria-label="Search for a tool"
+        >
+
+        <span class="search-shortcut">ESC</span>
+
+      </div>
+
+      <div class="search-modal-results">
+
+        <div class="search-modal-empty">
+          Type to search for tools...
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/passport-photo-editor.js"></script>
+
+</body>
+</html>

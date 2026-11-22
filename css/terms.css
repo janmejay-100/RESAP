@@ -1,0 +1,250 @@
+
+/* =========================================
+   RESAP TERMS OF USE
+========================================= */
+
+.terms-page {
+  width: 100%;
+  min-height: 70vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* HERO SECTION */
+
+.terms-page .terms-hero {
+  width: 100%;
+  padding: 76px 0 65px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.terms-page .terms-hero .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.terms-page .terms-hero .section-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  margin-bottom: 22px;
+  border-radius: 30px;
+  background: rgba(120, 169, 154, 0.14);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
+}
+
+.terms-page .terms-hero h1 {
+  font-size: clamp(40px, 5vw, 58px);
+  line-height: 1.15;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin: 0 0 18px;
+}
+
+.terms-page .terms-updated {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* CONTENT AREA */
+
+.terms-page .terms-content-section {
+  padding: 70px 0 90px;
+  background: var(--bg-primary);
+}
+
+.terms-page .terms-container {
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* INTRO CARD */
+
+.terms-page .terms-intro {
+  padding: 30px 34px;
+  margin-bottom: 28px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--color-primary);
+  border-radius: 14px;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.terms-page .terms-intro strong {
+  color: var(--text-primary);
+}
+
+/* CONTENT CARDS */
+
+.terms-page .terms-section {
+  padding: 30px 34px;
+  margin-bottom: 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+}
+
+.terms-page .terms-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.terms-page .terms-section h2::before {
+  content: "";
+  width: 5px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--color-primary);
+}
+
+.terms-page .terms-section p,
+.terms-page .terms-section li {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.terms-page .terms-section p {
+  margin: 0 0 15px;
+}
+
+.terms-page .terms-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* LISTS */
+
+.terms-page .terms-section ul {
+  padding-left: 25px;
+  margin: 18px 0;
+}
+
+.terms-page .terms-section li {
+  padding-left: 5px;
+  margin-bottom: 12px;
+}
+
+.terms-page .terms-section li::marker {
+  color: var(--color-primary);
+}
+
+/* LINKS */
+
+.terms-page .terms-section a {
+  color: var(--color-primary);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.terms-page .terms-section a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT CARD */
+
+.terms-page .terms-contact {
+  background: rgba(120, 169, 154, 0.09);
+  border-color: rgba(120, 169, 154, 0.35);
+}
+
+/* COPYRIGHT */
+
+.terms-page .terms-footer-note {
+  padding-top: 28px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .terms-page .terms-hero {
+    padding: 55px 0 45px;
+  }
+
+  .terms-page .terms-content-section {
+    padding: 45px 0 60px;
+  }
+
+  .terms-page .terms-container {
+    width: calc(100% - 36px);
+  }
+
+  .terms-page .terms-intro,
+  .terms-page .terms-section {
+    padding: 25px;
+  }
+
+  .terms-page .terms-section h2 {
+    font-size: 21px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .terms-page .terms-hero {
+    padding: 42px 0 35px;
+  }
+
+  .terms-page .terms-hero h1 {
+    font-size: 36px;
+  }
+
+  .terms-page .terms-content-section {
+    padding: 32px 0 45px;
+  }
+
+  .terms-page .terms-container {
+    width: calc(100% - 28px);
+  }
+
+  .terms-page .terms-intro,
+  .terms-page .terms-section {
+    padding: 21px;
+    border-radius: 12px;
+  }
+
+  .terms-page .terms-intro {
+    font-size: 16px;
+  }
+
+  .terms-page .terms-section {
+    margin-bottom: 16px;
+  }
+
+  .terms-page .terms-section h2 {
+    font-size: 19px;
+    gap: 9px;
+  }
+
+  .terms-page .terms-section p,
+  .terms-page .terms-section li {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .terms-page .terms-section ul {
+    padding-left: 20px;
+  }
+}

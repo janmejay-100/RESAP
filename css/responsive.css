@@ -1,0 +1,85 @@
+/* ========================================
+   Additional Responsive Overrides
+   ======================================== */
+
+/* General page responsive */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 56px;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .section {
+    padding: var(--space-10) 0;
+  }
+
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+
+  .tool-page {
+    padding: var(--space-6) 0 var(--space-10);
+  }
+
+  .tool-header h1 {
+    font-size: var(--text-xl);
+  }
+
+  .tool-panel {
+    padding: var(--space-4);
+  }
+
+  .upload-area {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-bar .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+  }
+
+  .btn-lg {
+    height: 42px;
+    font-size: var(--text-sm);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print */
+@media print {
+  .navbar,
+  .footer,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .page-wrapper {
+    padding-top: 0;
+  }
+}
