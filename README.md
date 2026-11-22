@@ -71,4 +71,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License.
 
 ---
-Built with ❤️ by Jnamejay Sahoo
+Built with ❤️ by Janmejay Sahoo
