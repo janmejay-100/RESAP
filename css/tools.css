@@ -4728,3 +4728,10 @@
 #imagePdfScanUploadStatus.status-info {
     color: #64748b !important;
 }
+.scan-network-notice {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #060606;
+  line-height: 1.6;
+}
