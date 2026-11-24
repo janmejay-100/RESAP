@@ -33,7 +33,7 @@ const input = {
 const optionalPages = [
   'about',
   'contact',
-  'privacy',
+  'privacy-policy',
   'terms',
   '404',
 ];
